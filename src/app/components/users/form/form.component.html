@@ -1,5 +1,15 @@
-<form [formGroup]="form" (change)="getUserId()">
+<!--<form [formGroup]="form" (change)="getUserId()">-->
+<!--  <select formControlName="userId">-->
+<!--    <option *ngFor="let user of users" -->
+<!--            [value]="user.id">{{user.id}} {{user.name}} {{user.email}}-->
+<!--    </option>-->
+<!--  </select>-->
+<!--</form>-->
+<form [formGroup]="form" (ngSubmit)="getUserId()">
   <select formControlName="userId">
-    <option *ngFor="let user of users" [value]="user.id">{{user.id}} {{user.name}} {{user.email}}</option>
+    <option *ngFor="let user of users"
+            [value]="user.id">{{user.id}} {{user.name}} {{user.email}}
+    </option>
   </select>
+  <button>save</button>
 </form>

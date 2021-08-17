@@ -15,6 +15,10 @@ export class UsersComponent implements OnInit {
   }
 
   getId(id: number) {
-    this.userService.getById(id).subscribe(value => this.user=value)
+    this.userService.getById(id).subscribe(value => {
+
+      this.user = value
+      console.log(this.user);
+    })
   }
 }

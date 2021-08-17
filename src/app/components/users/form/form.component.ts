@@ -17,11 +17,11 @@ form:FormGroup
 
   ngOnInit(): void {
   this.form= new FormGroup({
-    userId: new FormControl(1)
+    userId: new FormControl('')
   })
     this.userService.getAll().subscribe(value => this.users=value)
-    this.event.emit(this.form.controls.userId.value)
   }
+
 
   getUserId():void {
     this.event.emit(this.form.controls.userId.value)
