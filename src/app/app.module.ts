@@ -11,7 +11,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { UsersComponent } from './components/users/users.component';
 import { FormComponent } from './components/users/form/form.component';
 import { UserComponent } from './components/users/user/user.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { UserFormComponent } from './components/users/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,15 @@ import {ReactiveFormsModule} from "@angular/forms";
     CarComponent,
     UsersComponent,
     FormComponent,
-    UserComponent
+    UserComponent,
+    UserFormComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
