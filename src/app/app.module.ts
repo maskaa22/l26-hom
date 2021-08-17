@@ -8,6 +8,10 @@ import { NavComponent } from './components/home/nav/nav.component';
 import { CarsComponent } from './components/home/cars/cars.component';
 import { CarComponent } from './components/home/cars/car/car.component';
 import {HttpClientModule} from "@angular/common/http";
+import { UsersComponent } from './components/users/users.component';
+import { FormComponent } from './components/users/form/form.component';
+import { UserComponent } from './components/users/user/user.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,13 +19,17 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     NavComponent,
     CarsComponent,
-    CarComponent
+    CarComponent,
+    UsersComponent,
+    FormComponent,
+    UserComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

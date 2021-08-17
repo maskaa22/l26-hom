@@ -1,7 +1,8 @@
 import {environment} from "../../environments/environment";
 
-let {API} = environment;
+let {API, API2} = environment;
 
 export const urls ={
-  cars: `${API}/cars`
+  cars: `${API}/cars`,
+  users: `${API2}/users`
 }
