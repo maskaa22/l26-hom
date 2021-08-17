@@ -18,7 +18,7 @@ export class UsersComponent implements OnInit {
     this.userService.getById(id).subscribe(value => {
 
       this.user = value
-      console.log(this.user);
+
     })
   }
 }

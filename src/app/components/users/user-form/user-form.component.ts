@@ -9,8 +9,9 @@ import {UserService} from "../../../servises";
 })
 export class UserFormComponent implements OnInit {
   users:IUser[]
-  @Output()
+
   user:IUser
+
   usersOption:number
   constructor(private userService:UserService) { }
 
@@ -20,9 +21,9 @@ export class UserFormComponent implements OnInit {
 
   save(tref: HTMLFormElement):void {
 
-    console.log(this.usersOption);
+    //console.log(this.usersOption);
     this.userService.getById(this.usersOption).subscribe(value => {
-      console.log(this.user = value);
+
       this.user = value
     })
   }
