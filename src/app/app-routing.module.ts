@@ -6,7 +6,7 @@ import {CarComponent} from "./components/home/cars/car/car.component";
 import {CarFullResolveService} from "./servises";
 
 const routes: Routes = [
-  //{path:'', redirectTo: 'cars',pathMatch: 'full'},
+  {path:'', redirectTo: 'cars',pathMatch: 'full'},
   {path: '', component: HomeComponent, resolve:{cars:CarFullResolveService}, children:[
       {path: 'cars', component:CarsComponent, children:[
           {path:':id', component:CarComponent}

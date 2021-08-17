@@ -16,7 +16,8 @@ carFull:ICarFull;
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({cars}) => {
       this.carFull = cars;
-       this.router.navigate(['cars'], {state: this.carFull.data})
+      // this.router.navigate(['cars'], {state: this.carFull.data})
+      this.dataTransferService.setData(this.carFull.data)
     })
   }
 

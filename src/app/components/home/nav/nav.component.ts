@@ -18,6 +18,7 @@ export class NavComponent implements OnInit {
 
   next() {
     this.carService.getAll(this.links.next).subscribe(value => {
+      this.links=value.links
         this.dataTransferService.setData(value.data)
       }
     )

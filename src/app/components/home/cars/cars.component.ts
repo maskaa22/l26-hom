@@ -11,12 +11,12 @@ import {DataTransferService} from "../../../servises";
 export class CarsComponent implements OnInit {
 cars:ICar[]
   constructor(private router:Router, private dataTransferService:DataTransferService) {
-    this.cars=this.router.getCurrentNavigation()?.extras.state as ICar[];
-    console.log(this.cars);
+    // this.cars=this.router.getCurrentNavigation()?.extras.state as ICar[];
+    // console.log(this.cars);
   }
 
   ngOnInit(): void {
-  //this.dataTransferService.getData().subscribe(value => this.cars=value)
+  this.dataTransferService.getData().subscribe(value => this.cars=value)
   }
 
 }
